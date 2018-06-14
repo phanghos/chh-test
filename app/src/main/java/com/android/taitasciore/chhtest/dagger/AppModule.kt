@@ -11,7 +11,6 @@ import com.android.taitasciore.chhtest.data.repository.impl.PortfolioRepositoryI
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.readystatesoftware.chuck.ChuckInterceptor
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -41,7 +40,6 @@ class AppModule {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         return OkHttpClient.Builder()
-                .addInterceptor(ChuckInterceptor(context).showNotification(true))
                 .addInterceptor(httpLoggingInterceptor)
                 .addInterceptor(AuthInterceptor())
                 .build()
