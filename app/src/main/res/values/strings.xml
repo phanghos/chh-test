@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CHH Test</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="retry">retry</string>
+    <string name="coin_price">Price:</string>
+    <string name="coin_percentage_change">Percentage change:</string>
+    <string name="coin_amount">Amount:</string>
+    <string name="dialog_trade_make_trade">make trade</string>
+    <string name="dialog_trade_cancel">cancel</string>
+    <string name="user_portfolio_total_price">Total price in USD:</string>
+</resources>
