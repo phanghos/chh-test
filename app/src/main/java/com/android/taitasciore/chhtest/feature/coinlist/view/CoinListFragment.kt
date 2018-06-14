@@ -3,8 +3,7 @@ package com.android.taitasciore.chhtest.feature.coinlist.view
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.DividerItemDecoration
+import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.*
 import android.widget.Toast
@@ -17,17 +16,14 @@ import com.android.taitasciore.chhtest.feature.coinlist.viewmodel.CoinListViewMo
 import com.android.taitasciore.chhtest.feature.coinlist.viewmodel.CoinListViewModelFactory
 import com.android.taitasciore.chhtest.feature.userportfolio.view.UserPortfolioFragment
 import com.android.taitasciore.chhtest.presentation.base.BaseView
-import com.android.taitasciore.chhtest.presentation.view.BaseFragment
-import com.android.taitasciore.chhtest.util.addDivider
-import com.android.taitasciore.chhtest.util.hideView
-import com.android.taitasciore.chhtest.util.showView
+import com.android.taitasciore.chhtest.util.*
 import com.jakewharton.rxbinding2.support.v7.widget.RxRecyclerView
 import com.jakewharton.rxbinding2.view.RxView
 import io.reactivex.Observable
 import kotlinx.android.synthetic.main.fragment_coin_list.*
 import javax.inject.Inject
 
-class CoinListFragment : BaseFragment(), BaseView<CoinListUiEvent, CoinListViewState> {
+class CoinListFragment : Fragment(), BaseView<CoinListUiEvent, CoinListViewState> {
 
     @Inject lateinit var factory: CoinListViewModelFactory
 
