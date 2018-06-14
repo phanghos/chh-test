@@ -21,3 +21,8 @@ Android technical test for the Android Developer position at CHH
 * **Single source of truth for data**: The data is coming from a single point, which makes it a lot easier to debug errors, becuse they're easily traceable
 
 For a more detailed explanation of MVI, check this out: http://hannesdorfmann.com/android/mosby3-mvi-1
+
+
+# Additional notes
+
+The test is not 100% complete. I had no time to unit test every class nor implement any UI test. Furthermore, whenever fetching the user portfolio, there may arise the case where we don't directly know the name of a coin with a particular ID, because we haven't fetched that from the list, and so, it has not been stored locally. For these cases, I'm showing **Unknown Coin**. I would also have moved dimensions (for margins, padding, text sizes, etc)  to a separated `dimens.xml`, as well as moved hard-coded strings to `strings.xml`,
